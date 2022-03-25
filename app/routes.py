@@ -1,10 +1,9 @@
 from app import api, web
-from app.controllers.MyViewController import MyViewController
-from app.controllers import MyController, MyViewController, TaskController
+from app.controllers import MyController, MyViewController
+from app.controllers.api import ApiTodoController
+
+api.add_resource(ApiTodoController.TodoController, '/todo', '/todo/<string:id>')
 
 api.add_resource(MyController.MyController, '/')
-
-# Tambahkan route ini
 web.add_resource(MyViewController.MyViewController, '/')
 web.add_resource(MyViewController.MySecondViewController, '/say-my-name')
-web.add_resource(TaskController.TaskController, '/dua-parameter')
