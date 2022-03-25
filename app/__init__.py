@@ -6,3 +6,5 @@ api = Api(app, prefix='/api') # Melakukan inisialisasi terhadap library RESTful 
 web = Api(app) # Melakukan inisialisasi terhadap library RESTful untuk route web
 
 from app import routes
+from app.db_manager import DatabaseManager
+DatabaseManager.open_database() # Melakukan inisialisasi terhadap library database
