@@ -24,3 +24,38 @@ class TodoController(Resource):
             return response.ok('Todo Created!', TodoTransformer.single_transform(todo))
         except Exception as e:
             return response.bad_request("{}".format(e), '')
+
+    def put(self, id):
+        try:    
+            todo = Todo.objects(id=id).first()
+
+            if not todo:
+                return response.not_found('Todo not found!', '')
+
+            todo.title = request.json['title']
+            todo.description = request.json['description']
+            todo.done = request.json['done']
+            todo.updated_at = datetime.now()
+            todo.save()
+
+            return response.ok('Todo Updated!', TodoTransformer.single_transform(todo))
+        except Exception as e:
+            return response.bad_request("{}".format(e), '')
+
+    def delete(self, id):
+        try:
+            todo = Todo.objects(id=id).first()
+
+            if not todo:
+                return response.not_found('Todo not found!', '')
+
+            if todo.deleted_at:
+                return response.bad_request('Todo already deleted!', '')
+
+
+            todo.deleted_at = datetime.now()
+            todo.save()
+
+            return response.ok('Todo Deleted!', TodoTransformer.single_transform(todo))
+        except Exception as e:
+            return response.bad_request("{}".format(e), '')
