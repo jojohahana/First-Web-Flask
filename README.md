@@ -7,6 +7,6 @@ I am self-taught based on tutorials & browsing to get the right way
 - Tutorial how use Postman on [Medium](https://medium.com/@thejasonfile/a-pithy-perusal-of-post-and-put-and-patch-52a7f6443ceb)
 
 # Test API using Postman & MongoDB
-([![GET-first.png](https://i.postimg.cc/WzsNr6dx/GET-first.png)](https://postimg.cc/7GQrrzMN))
+[![GET-first.png](https://i.postimg.cc/WzsNr6dx/GET-first.png)](https://postimg.cc/7GQrrzMN)
 [![POST-data.png](https://i.postimg.cc/28hpmB3Z/POST-data.png)](https://postimg.cc/hfDZ1vLD)
 [![GET-afterpostdata.png](https://i.postimg.cc/gj3M984c/GET-afterpostdata.png)](https://postimg.cc/vxH7f1pC)
