@@ -59,3 +59,20 @@ class TodoController(Resource):
             return response.ok('Todo Deleted!', TodoTransformer.single_transform(todo))
         except Exception as e:
             return response.bad_request("{}".format(e), '')
+
+
+    def get(self, id=None):
+        if not id:
+            q = request.args.get('q')
+
+            todos = Todo.objects(title__contains=q, deleted_at=None).all()
+            todos = TodoTransformer.transform(todos)
+        else:
+            todos = Todo.objects(id=id, deleted_at=None).first()
+            
+            if not todos:
+                return response.bad_request('Todo not found!', '')
+
+            todos = TodoTransformer.single_transform(todos)
+
+        return response.ok('', todos)
