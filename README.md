@@ -3,8 +3,8 @@ Personal documentation learning Flask, follow tutorial by [Hudya](https://husite
 
 # How I Learn ?
 I am self-taught based on tutorials & browsing to get the right way
-Tutorial for Instalasi MongoDB on [Medium](https://medium.com/@iqbal-abuniyaz/instalasi-mongodb-di-windows-e3626e66d449)
-Tutorial how use Postman on [Medium](https://medium.com/@thejasonfile/a-pithy-perusal-of-post-and-put-and-patch-52a7f6443ceb)
+- Tutorial for Instalasi MongoDB on [Medium](https://medium.com/@iqbal-abuniyaz/instalasi-mongodb-di-windows-e3626e66d449)
+- Tutorial how use Postman on [Medium](https://medium.com/@thejasonfile/a-pithy-perusal-of-post-and-put-and-patch-52a7f6443ceb)
 
 # Test API using Postman & MongoDB
 ([![GET-first.png](https://i.postimg.cc/WzsNr6dx/GET-first.png)](https://postimg.cc/7GQrrzMN))
